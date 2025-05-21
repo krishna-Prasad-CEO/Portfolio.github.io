@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Play:wght@400;700&family=Quicksand:wght@300..700&display=swap');
+
+.col svg{
+    width: 150px;
+    height: 150px;
+}
+#hero .card{
+    background-color: transparent;
+    transition: all 0.5s;
+}
+#hero .card:hover{
+transform: scale(1);
+background-color: transparent;
+}
+#hero .card:hover::before{
+    opacity: 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+
+
+/* Container styling */
+#about {
+  padding: 60px 20px;
+  background-color: transparent;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+/* Heading style */
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Paragraph style */
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: left;
+  max-width: 800px;
+}
+span{
+    color:crimson;
+    font-weight: bold;
+    font-family: "Play", sans-serif;
+}
+
+.card {
+    background-color: rgba(245, 243, 243, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative; /* Needed for pseudo-element positioning */
+    overflow: hidden; /* Ensures gradient doesn't spill outside */
+    transition: border-color 2s ease, box-shadow 0.8s ease; /* Transition non-gradient properties */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.8s ease; /* Smoothly fade in */
+    z-index: -1; /* Place it behind the card's content if any */
+    border-radius: inherit; /* Inherit border-radius from parent */
+}
+
+.card:hover::before {
+    opacity: 0.4; /* Fade in on hover */
+}
+.un{
+    border: 5px solid transparent; 
+    border-image: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    border-image-slice: 1;
+    padding: 10px;
+
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(245, 243, 243, 0); /* Fade original background out */
+}
+
+.hero{
+    font-family: "Play", sans-serif;
+}
+
+.hero1{
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+}
+.col{
+     font-family: "Cinzel", serif;
+     font-weight: bolder;
+}
+
+nav a{
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+}
+
+/*------------Home completed---------------*/
+
+h4{
+    font-family:cursive;
+    border-bottom: 1px solid black;
+    padding: 12px;
+}
+
+footer{
+    font-family: "Cinzel", serif;
+}
